@@ -16,15 +16,14 @@ export default function CartItem({ item, addTocart, removeFromCart }: props) {
                     <div className="container">
                         <div className="row">
                             <div className="col">
+                                <p className="card-text" style={{ width: "18rem"}}> Price: {`\u20B9`} {item.price}</p>
+                                 <p className="card-text"> Total : {`\u20B9`} {item.amount * item.price} </p>
+                            </div>
+                            <div className="col">
                             <button className='btn btn-primary' onClick={() => removeFromCart(item.id)} > - </button>
                             </div>
                             <div className="col">
-                                <p className="card-text"> Price: {`\u20B9`} {item.price}</p>
-                                 <p className="card-text"> Total : {`\u20B9`} {item.amount * item.price} </p>
-                                 <p className="card-text">Quantity : {item.quantity} </p>
-                            </div>
-                            <div className="col">
-                            <button className='btn btn-primary mx-4' onClick={() => addTocart(item)}>+</button>
+                            <button className='btn btn-primary' onClick={() => addTocart(item)}>+</button>
                             </div>
                         </div>
                     </div>
