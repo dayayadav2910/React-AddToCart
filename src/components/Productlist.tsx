@@ -1,7 +1,5 @@
-import { useState, useEffect } from 'react'
 import {CartItemType} from '../App'
 import '../App'
-import Cart from './Cart'
  
 type props = {
   item : CartItemType,
